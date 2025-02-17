@@ -13,20 +13,13 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
         <?php
-        function areColoursTheSame($col1, $col2){
-            if ($col1 != $col2){
-                echo "not";
-            }
-        }
-        $color1 = "red";
-        $color2 = "blue";
-        $doc = <<<TXT
-        My car is $color1<br>
-        My shirt is $color2<br>
-        My car and shirt are 
-        TXT;
-        echo $doc;
+        $w3 = "W3Schools.com";
+        echo "I love $w3<br>";
+        echo "I love".$w3." !";
         ?>
     </body>
 </html>
