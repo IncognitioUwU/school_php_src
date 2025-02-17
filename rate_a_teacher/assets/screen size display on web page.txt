@@ -1,0 +1,28 @@
+Put this line of code just before </head>.  This gives us access to extra features found in “jQuery”.
+-----------------------------------------------------------------------------------------------------
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+Put this code immediately after <body>.  This displays the screen size at the top left of your page.
+-----------------------------------------------------------------------------------------------------
+<div id="screenSize" class="fixed-top" style="color: black; background-color: rgba(255,255,0,0.5); width: 230px;"></div>
+    <script>
+    var WindowsSize=function(){
+        var h=$(window).height(), w=$(window).width();
+        var device = "";
+        if (w>=1400) {device="xxl Desktop Large";}
+        else if (w>=1200) {device="xl Desktop";}
+        else if (w>=992) {device="lg Laptop";}
+        else if (w>=768) {device="md Tablet";}
+        else if (w>=576) {device="sm Landscape Phone";}
+        else {device="col Portrait Phone";}
+        $("#screenSize ").html("&nbsp"+device+" ("+w+"x"+h+")");
+        };
+    $(document).ready(WindowsSize); 
+    $(window).resize(WindowsSize);
+</script>
+
+
+If nav bar covers device size info, add "z-2" to nav class.
+-----------------------------------------------------------------------------------------------------
+<nav class="z-2 navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
