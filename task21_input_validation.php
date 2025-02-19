@@ -75,7 +75,7 @@
             <input type="radio" name="gender" value="Male">Male
             <input type="radio" name="gender" value="Other" checked="checked">Other<br>
             <br><br>
-            <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit"><br>
             </form>
         </div>
         <div id="output">
