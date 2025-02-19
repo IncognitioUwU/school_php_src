@@ -14,6 +14,7 @@
     </head>
     <body>
         <?php
+        ini_set(option: 'display_errors', value: 0);
         $name = $email = $gender = $comment = $website = "";
         
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
